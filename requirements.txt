@@ -1,0 +1,33 @@
+# Excel发票数据处理软件 - Streamlit版本依赖包
+# 基于原有Tkinter版本的核心依赖，添加Streamlit相关包
+
+# Web框架
+streamlit>=1.28.0
+
+# 数据处理核心包（与原版本保持一致）
+pandas>=1.5.0
+openpyxl>=3.0.0
+numpy>=1.21.0
+pyarrow>=10.0.0
+
+# 日期时间处理
+python-dateutil>=2.8.0
+
+# 包管理和工具
+packaging>=21.0
+setuptools>=65.0
+
+# 时区处理
+pytz>=2022.1
+
+# 文件压缩
+zipp>=3.8.0
+
+# 可选：性能优化包
+xlsxwriter>=3.0.0
+
+# 可选：更好的Excel支持
+xlrd>=2.0.0
+
+# 系统兼容性
+six>=1.16.0
