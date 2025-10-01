@@ -777,7 +777,16 @@ def show_column_selector_interface():
                             # 只选择存在的列
                             template_selected = [col for col in template_columns if col in columns]
                             st.session_state.temp_selected_columns = template_selected
-                            st.success(f"✅ 已应用模板：{selected_template}，匹配到 {len(template_selected)} 列")
+                            
+                            # 关键修复：同步更新所有复选框的session_state
+                            for column_name in columns:
+                                checkbox_key = f"checkbox_{column_name}_{hash(column_name) % 10000}"
+                                if column_name in template_selected:
+                                    st.session_state[checkbox_key] = True
+                                else:
+                                    st.session_state[checkbox_key] = False
+
+                            st.success(f"✅ 已应用模板：{selected_template}，匹配到 {len(template_selected)} 列")                        
                         else:
                             st.error("❌ 模板不存在")
                     except Exception as e:
