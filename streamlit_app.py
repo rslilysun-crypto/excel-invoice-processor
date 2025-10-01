@@ -53,13 +53,13 @@ st.markdown("""
 
 /* 强制设置主内容区域的顶部间距 */
 .stApp > div[data-testid="stAppViewContainer"] > .main > .block-container {
-    padding-top: 3rem !important;
+    padding-top: 1rem !important;
     margin-top: 0 !important;
 }
 
 /* 确保页面有足够的顶部空间，整体下移 */
 .main > div {
-    padding-top: 2rem !important;
+    padding-top: 0.5rem !important;
 }
 
 /* 确保标题有足够的顶部间距 */
@@ -106,7 +106,7 @@ div[data-testid="stExpander"] {
 
 /* 优化整体页面布局 */
 .block-container {
-    padding-top: 0.8rem !important;
+    padding-top: 1.5rem !important;
     padding-bottom: 0.8rem !important;
 }
 
@@ -129,7 +129,8 @@ div[data-testid="stDataFrame"] {
 
 /* 强制设置所有标题的顶部空间 */
 .main h1, .main h2, .main h3 {
-    margin-top: 1rem !important;
+    margin-top: 0.5rem !important;
+    padding-top: 0.5rem !important;
 }
 
 /* 缩短文件上传区域高度 */
